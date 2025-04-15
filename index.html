@@ -9,6 +9,7 @@
 	body {width:100%; background-color: #FFFFD0;}
 	.container {max-width: 60em; margin: auto;}
 	h1 {text-align: center;}
+	body {font-familiy: Arial, sans-serif; font-size:16pt}
   </style>
 </head>
 
@@ -16,13 +17,13 @@
   <div class="container">
   <h1>Using LLMs as prompt modifier to avoid biases in AI image generators</h1>
   <p>This is the git repo accompanying the paper about mitigating biases in AI image generators by using large language models to modify potentially underspecified prompts of end users.</p>
-  <h2>image results</h2>
+  <h2>Image results</h2>
   <ul>
   <li><a href="./comparison-Flux.htm">Image results from Flux</a></li>
   <li><a href="./comparison-SD35.htm">Image results from Stable Diffusion 3.5 large turbo</a></li>
   <li><a href="./comparison-SDXL.htm">Image results from Dreamshaper XL (SDXL turbo)</a></li>
   </ul>
-   <h2>prompts</h2>
+   <h2>Prompts</h2>
   <ul>
     <li><a href="./prompts/chatgpt-prompts.txt">Modified prompts from ChatGPT</a></li>
 	<li><a href="./prompts/claude-prompts.txt">Modified prompts from Claude</a></li>
@@ -30,6 +31,8 @@
 	<li><a href="./prompts/llama-prompts.txt">Modified prompts from Llama</a></li>
   </ul>
 
+<h2>LLM prompt</h2>
+<p>You are a member of the ethics board responsible for supervising an AI image generator. Users will give you their demand for images and your task is it to generate a prompt for Stable Diffusion to generate the desired output, but with paying attention to potential biases or other ethical issues. To do that, you are first analyzing the image generation demand from the user for potential ethical issues and then write a prompt that circumvents the problems as far as possible. Be aware, that the image generator can generate multiple images at once (four by default) but does so independently and cannot add diversity on its own. If you want the four pictures to be diverse, you probaly have to write four separate prompts and set batch-size for Stable Diffusion to 1. Output the prompt always in English language, even if the user asks you in German. The user prompt is:</p>
   </div>
 </body>
 
